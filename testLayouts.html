@@ -3,9 +3,12 @@ layout: test
 ---
 <header>
 	<h1>Test Layouts</h1>
-	<ul>
-		<li><a href="{{site.baseurl}}/test.html">Home</a></li>
-		<li><a href="{{site.baseurl}}/testLayouts.html">Test Layouts</a></li>
-	</ul>
+	{% include testNav.html %}
 </header>
-<footer>©copyright(2016) QIANG WANG </footer>
+
+<footer>
+	<h1>Test Includes</h1>
+	<p>Test including testNav.html and copyright.html in BOTH header and footer</p>
+	{% include testNav.html %}
+	{% include copyright.html %}
+</footer>
